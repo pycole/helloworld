@@ -1,4 +1,4 @@
-import os
+
 def fab(n):
   if n==1:
     return 1
@@ -8,5 +8,8 @@ def fab(n):
     result=int(fab(n-1))+int(fab(n-2))    
     return result
     
-for i in range(111):     #give a test in range 0---111
-  print(fab(i))
+f=open("e:/fabaric.txt","w")
+answer=input("Input your max number:")
+for i in range(answer):     #give a test in range 0---111
+  print(fab(i),file=f)
+  
